@@ -10,11 +10,11 @@ OS := $(shell uname -s | sed 's/ /_/' | tr A-Z a-z)
 CPU := $(shell uname -m | sed 's/ /_/' | tr A-Z a-z)
 
 # target
-CC = ${RISCV}/bin/${TARGET}-gcc
-CXX = ${RISCV}/bin/${TARGET}-g++
-AS = ${RISCV}/bin/${TARGET}-as
-LD = ${RISCV}/bin/${TARGET}-ld
-STRIP = ${RISCV}/bin/${TARGET}-strip
+CC = ${TARGET}-gcc
+CXX = ${TARGET}-g++
+AS = ${TARGET}-as
+LD = ${TARGET}-ld
+STRIP = ${TARGET}-strip
 PK = ${RISCV}/${TARGET}/bin/pk
 
 TARGET_DIR = $(TARGET)

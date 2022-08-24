@@ -5,12 +5,12 @@
 # Requires RISCV environment variable to be set
 # RISCV = /opt/riscv/toolchain
 
-CC = ${RISCV}/bin/${TARGET}-gcc -march=$(ARCH)
-CXX = ${RISCV}/bin/${TARGET}-g++ -march=$(ARCH)
-AS = ${RISCV}/bin/${TARGET}-as
-LD = ${RISCV}/bin/${TARGET}-ld
-OBJCOPY = ${RISCV}/bin/${TARGET}-objcopy
-STRIP = ${RISCV}/bin/${TARGET}-strip
+CC = ${TARGET}-gcc -march=$(ARCH)
+CXX = ${TARGET}-g++ -march=$(ARCH)
+AS = ${TARGET}-as
+LD = ${TARGET}-ld
+OBJCOPY = ${TARGET}-objcopy
+STRIP = ${TARGET}-strip
 
 SRC_DIR = src/rom
 OBJ_DIR = build/$(TARGET)/obj

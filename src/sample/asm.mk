@@ -11,8 +11,8 @@ HOST_CXX = c++
 # compiler function tests
 check_opt =     $(shell T=$$(mktemp /tmp/test.XXXX); echo 'int main() { return 0; }' > $$T.$(2) ; $(1) $(3) $$T.$(2) -o /dev/null >/dev/null 2>&1 ; echo $$?; rm $$T $$T.$(2))
 
-TARGET_CC = ${RISCV}/bin/${TARGET}-gcc -march=$(ARCH)
-TARGET_CXX = ${RISCV}/bin/${TARGET}-g++ -march=$(ARCH)
+TARGET_CC = ${TARGET}-gcc -march=$(ARCH)
+TARGET_CXX = ${TARGET}-g++ -march=$(ARCH)
 
 SRC_DIR = src/sample
 OBJ_DIR = build/$(TARGET_DIR)/sample-obj
